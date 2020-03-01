@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+/* 기본 언어는 한국어 */
+.lang-en {
+    display: none;
+}
+
+#lang-selector {
+    position: fixed;
+    padding: 20px;
+}
+
+#lang-selector #langs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#lang-selector #langs .lang {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+
+    /* 커서 변경 */
+    cursor: pointer;
+}
+
+#banner {
+    color: white;
+    font-size: 10rem;
+
+    /* 화면 높이에 맞춤 */
+    height: 100vh;
+
+    /* 배경 스크롤 */
+    background-attachment: fixed;
+
+    /* 배경 크기 알맞게 조정 */
+    background-size: cover;
+
+    /* 글자 가운데 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 드래그 금지 */
+    user-select: none;
+}
+
+#works {
+    padding: 0;
+    margin: 0;
+}
+
+#works .work {
+    color: white;
+    height: 50vh;
+    margin: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 세로로 나열 */
+    flex-direction: column;
+}
+
+#works .work h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#works .work p {
+    font-size: 1.2rem;
+    padding: 0 120px;
+}
+
+#works .work a {
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.1rem;
+
+    /* background 속성 변화가 0.2초동안 천천히 일어나는 애니메이션 효과 */
+    transition: background 0.2s;
+}
+
+/* 선택자:hover  =  마우스 갖다댈 시 */
+#works .work a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    #banner {
+        font-size: 6rem;
+    }
+
+    #works .work h2 {
+        font-size: 2rem;
+    }
+
+    #works .work p {
+        font-size: 0.9rem;
+        padding: 0 60px;
+    }
+
+    #works .work a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+}
