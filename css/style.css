@@ -8,7 +8,12 @@ body {
 }
 
 #lang-selector {
+    /* 화면에 고정됨*/
     position: fixed;
+
+    /* 맨 위로 */
+    z-index: 100;
+
     padding: 20px;
 }
 
@@ -30,25 +35,65 @@ body {
 }
 
 #banner {
-    color: white;
-    font-size: 10rem;
-
-    /* 화면 높이에 맞춤 */
-    height: 100vh;
-
-    /* 배경 스크롤 */
-    background-attachment: fixed;
-
-    /* 배경 크기 알맞게 조정 */
-    background-size: cover;
-
     /* 글자 가운데 정렬 */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#banner-video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    /* 화면 높이에 맞춤 */
+    height: 100vh;
+
+    /* 넘어간 영상 자름 */
+    overflow: hidden;
+
+    /* 배경으로 */
+    z-index: -10;
+}
+
+#banner-video-wrapper video {
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#banner {
+    color: white;
+    font-size: 10rem;
+
+    /* 배경 어둡게 함 */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* 동영상 위로 가도록 */
+    z-index: 1;
 
     /* 드래그 금지 */
     user-select: none;
+
+    /* 화면 높이에 맞춤 */
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #works {
