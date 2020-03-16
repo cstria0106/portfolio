@@ -3,7 +3,7 @@ body {
 }
 
 /* 기본 언어는 한국어 */
-.lang-en {
+.lang-en, .lang-ja {
     display: none;
 }
 

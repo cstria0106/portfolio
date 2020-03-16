@@ -1,6 +1,7 @@
 var langs = {
     "한국어": "ko",
-    "English": "en"
+    "English": "en",
+    "日本語": "ja",
 }
 
 var currentLang = "한국어";
